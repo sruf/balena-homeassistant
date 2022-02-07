@@ -1,3 +1,7 @@
+# Fork
+Add zigbee2mqtt with configuration for Raspbee II (deconz) adapter.
+
+
 # Balena Home Assistant
 Home Assistant on balena! Why?
 - Easy, secure remote access out of the box - no changes to your router required
