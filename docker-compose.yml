@@ -31,10 +31,13 @@ services:
   zigbee2mqtt:
     build: zigbee2mqtt
     restart: always
+    privileged: true
+    ports:
+      - 81:8080
     volumes:
       - zigbee2mqtt:/app/data
     devices:
       - /dev/ttyACM0:/dev/ttyACM0
     environment:
       - DATA=/app/data
-      - TZ=Europe/Vilnius
+      - TZ=Europe/Berlin
