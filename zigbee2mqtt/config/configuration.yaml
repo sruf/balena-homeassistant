@@ -1,6 +1,8 @@
 # Home Assistant integration (MQTT discovery)
 homeassistant: true
 
+frontend: true
+
 # allow new devices to join
 permit_join: true
 
