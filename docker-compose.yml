@@ -37,7 +37,7 @@ services:
     volumes:
       - zigbee2mqtt:/app/data
     devices:
-      - /dev/ttyACM0:/dev/ttyACM0
+      - /dev/ttyAMA0:/dev/ttyAMA0
     environment:
       - DATA=/app/data
       - TZ=Europe/Berlin
