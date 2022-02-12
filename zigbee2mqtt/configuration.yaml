@@ -18,6 +18,4 @@ mqtt:
 
 # Serial settings
 serial:
-  # Raspbee II
-  adapter: deconz
-  port: /dev/ttyAMA0
+  port: /dev/ttyACM0

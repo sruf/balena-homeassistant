@@ -1,3 +1,3 @@
 FROM koenkk/zigbee2mqtt
 
-COPY config /app
+COPY configuration.yaml /app/data

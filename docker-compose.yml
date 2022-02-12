@@ -1,17 +1,8 @@
 version: '2'
 volumes:
-    config:
     mosquitto:
     zigbee2mqtt:
 services:
-  homeassistant:
-    build: homeassistant
-    ports:
-      - 80:8123
-    privileged: true
-    volumes:
-      - 'config:/config'
-    restart: always
   mqtt:
     build: mqtt
     ports:
@@ -19,25 +10,16 @@ services:
     restart: always
     volumes:
       - mosquitto:/mosquitto/data
-  hass-configurator:
-    image: "causticlab/hass-configurator-docker:latest"
-    restart: always
-    ports:
-      - "3218:3218"
-    volumes:
-      - 'config:/hass-config'
-    environment:
-      - HC_BASEPATH=/hass-config
   zigbee2mqtt:
     build: zigbee2mqtt
     restart: always
     privileged: true
     ports:
-      - 81:8080
+      - 8080:8080
     volumes:
       - zigbee2mqtt:/app/data
     devices:
-      - /dev/ttyAMA0:/dev/ttyAMA0
+      - /dev/ttyACM0
     environment:
       - DATA=/app/data
       - TZ=Europe/Berlin
