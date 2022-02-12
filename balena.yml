@@ -1,4 +1,4 @@
-name: Home Assistant
+name: Zigbee2MQTT with CC2532
 description: >-
   Zigbee2MQTT and MQTT, later to be extended to include TRAEFIK and HomeAssistant
 type: sw.application
@@ -9,4 +9,4 @@ data:
     - raspberrypi4-64
     - fincm3
     - beaglebone-black
-version: 0.0.6
+version: 0.0.7

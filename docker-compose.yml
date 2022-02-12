@@ -23,3 +23,5 @@ services:
     environment:
       - DATA=/app/data
       - TZ=Europe/Berlin
+    stdin_open: true
+    tty: true
